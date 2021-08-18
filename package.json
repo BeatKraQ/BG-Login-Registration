@@ -1,0 +1,34 @@
+{
+  "name": "battleground",
+  "version": "1.0.0",
+  "description": "Battleground Login and Registration Recreation",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeatKraQ/Battleground.git"
+  },
+  "author": "Hyunwoo Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeatKraQ/Battleground/issues"
+  },
+  "homepage": "https://github.com/BeatKraQ/Battleground#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "bootstrap": "^5.1.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}

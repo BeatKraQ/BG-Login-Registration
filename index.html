@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Battleground</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  </head>
+
+  <body>
+    <div class="container-wrapper" id="container-wrapper">
+        <div class="video-sub">
+          <video
+            loop
+            muted
+            autoplay
+            class="video"
+            poster="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/account-login.jpg"
+          >
+            <source
+              type="video/webm"
+              srcc="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/video/account-login.webm"
+            />
+            <source
+              type="video/mp4"
+              src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/video/account-login.mp4"
+            />
+          </video>
+        </div>
+        <nav class="navbar">
+          <div class= "container justify-content-end">
+            <div class="registration">
+              <a class="navbar-item" id="login-registration" href="/register.html">
+                <i class="fas fa-user-circle" style="font-size: 1.1em"></i></span>&nbsp REGISTER</a>
+            </div>
+            <div class="dropdown">
+              <a
+                class="navbar-item"
+                id="language"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-globe"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"
+                  />
+                </svg>
+              </a>
+              <ul class= "dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuOffset" style="margin-top: 10px; margin-right: -20px">
+                <li><a class="dropdown-item" href="#"
+                >English</a></li
+                >
+                <li><a class="dropdown-item" href="#"
+                    >한국어</a></li
+                >
+                <li><a class="dropdown-item" href="#"
+                    >日本語</a></li
+                >
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container form-container">
+            <div class="column">
+                <form>
+                    <div class= "bg-logo horizontal-center">
+                      <svg width="350px" height="187px" enable-background="new 0 0 1944.42 992.13" viewBox="0 0 1944.42 992.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                          <path id="a" d="m1349.18 491.04h-35.53c-1.65 0-2.98 1.34-2.98 2.98v211.15c0 1.65-1.34 2.98-2.98 2.98h-16.77c-1.65 0-2.98-1.34-2.98-2.98v-211.14c0-1.65-1.34-2.98-2.98-2.98h-35.53c-1.65 0-2.98 1.34-2.98 2.98v229.93c0 3.17 1.26 6.2 3.49 8.44l13.76 13.76c2.24 2.24 5.27 3.49 8.44 3.49h54.35c3.17 0 6.2-1.26 8.44-3.49l13.75-13.76c2.24-2.24 3.49-5.27 3.49-8.44v-229.93c-.01-1.65-1.34-2.99-2.99-2.99zm-382.4 232.92c0 3.16-1.26 6.2-3.49 8.44l-13.76 13.76c-2.24 2.24-5.27 3.49-8.44 3.49h-54.35c-3.16 0-6.2-1.26-8.44-3.49l-13.76-13.76c-2.24-2.24-3.49-5.27-3.49-8.44v-207.23c0-3.16 1.26-6.2 3.49-8.44l13.75-13.75c2.24-2.24 5.28-3.5 8.44-3.5h54.34c3.16 0 6.2 1.26 8.44 3.49l13.75 13.76c2.24 2.24 3.5 5.27 3.5 8.44v57.15c0 1.65-1.34 2.98-2.98 2.98h-35.52c-1.65 0-2.98-1.34-2.98-2.98v-38.36c0-1.65-1.34-2.98-2.98-2.98h-16.77c-1.65 0-2.98 1.34-2.98 2.98v169.66c0 1.65 1.34 2.98 2.98 2.98h16.77c1.65 0 2.98-1.34 2.98-2.98v-64.08h-8.39c-1.65 0-2.98-1.34-2.98-2.98v-35.52c0-1.65 1.34-2.98 2.98-2.98h28.88 18.02c1.65 0 2.98 1.34 2.98 2.98v121.36zm-671.44-229.42c-2.24-2.24-5.27-3.49-8.44-3.49h-77.05c-1.65 0-2.98 1.34-2.98 2.98v105.57h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v105.57c0 1.65 1.34 2.98 2.98 2.98h77.05c3.16 0 6.2-1.26 8.44-3.5l13.75-13.76c2.24-2.24 3.5-5.27 3.5-8.44v-77.92c0-3.17-1.26-6.2-3.5-8.44l-17.25-17.25 17.25-17.25c2.24-2.24 3.5-5.27 3.5-8.44v-77.93c0-3.17-1.26-6.2-3.5-8.44zm-24.24 210.64c0 1.65-1.34 2.98-2.98 2.98h-19.76v-67.06h19.76c1.65 0 2.98 1.34 2.98 2.98zm0-108.56c0 1.65-1.34 2.98-2.98 2.98h-19.76v-67.07h19.76c1.65 0 2.98 1.34 2.98 2.98zm824.14-1.96v-77.93c0-3.17-1.26-6.2-3.5-8.44l-13.75-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-77.05c-1.65 0-2.98 1.34-2.98 2.98v105.58h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v105.57c0 1.65 1.34 2.98 2.98 2.98h35.52c1.65 0 2.98-1.34 2.98-2.98v-105.56h19.76c1.65 0 2.98 1.34 2.98 2.98v102.59c0 1.65 1.34 2.98 2.98 2.98h35.52c1.65 0 2.98-1.34 2.98-2.98v-100.63c0-3.17-1.26-6.2-3.5-8.44l-17.25-17.25 17.25-17.25c2.26-2.24 3.52-5.27 3.52-8.44zm-44.47 4.94h-19.76v-67.07h19.76c1.65 0 2.98 1.34 2.98 2.98v61.1c0 1.66-1.34 2.99-2.98 2.99zm554.82-91.3-13.76-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-77.05c-1.65 0-2.98 1.34-2.98 2.98v252.64c0 1.65 1.34 2.98 2.98 2.98h77.05c3.16 0 6.2-1.26 8.44-3.5l13.75-13.75c2.24-2.24 3.49-5.27 3.49-8.44v-207.23c.02-3.16-1.24-6.2-3.48-8.43zm-37.99 196.88c0 1.65-1.34 2.98-2.98 2.98h-19.76v-175.62h19.76c1.65 0 2.98 1.34 2.98 2.98zm-341.2-105.58h-2.7v-82.87c0-3.17-1.26-6.2-3.49-8.44l-13.76-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-54.34c-3.17 0-6.2 1.26-8.44 3.49l-13.75 13.76c-2.24 2.24-3.49 5.27-3.49 8.44v82.87h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v82.87c0 3.17 1.26 6.2 3.49 8.44l13.75 13.76c2.24 2.24 5.28 3.49 8.44 3.49h54.34c3.17 0 6.2-1.26 8.44-3.49l13.76-13.76c2.24-2.24 3.49-5.27 3.49-8.44v-82.87h2.7c1.65 0 2.98-1.34 2.98-2.98v-35.53c.01-1.64-1.33-2.98-2.98-2.98zm-44.19 105.58c0 1.65-1.34 2.98-2.98 2.98h-16.77c-1.65 0-2.98-1.34-2.98-2.98v-169.66c0-1.65 1.34-2.98 2.98-2.98h16.77c1.65 0 2.98 1.34 2.98 2.98zm-423.89-214.14c-1.65 0-2.98 1.34-2.98 2.98v105.58h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v105.57c0 1.65 1.34 2.98 2.98 2.98h77.02c1.65 0 2.98-1.34 2.98-2.98v-35.52c0-1.65-1.34-2.98-2.98-2.98h-38.51v-67.06h38.51c1.65 0 2.98-1.34 2.98-2.98v-35.53c0-1.65-1.34-2.98-2.98-2.98h-38.51v-67.07h38.51c1.65 0 2.98-1.34 2.98-2.98v-35.52c0-1.65-1.34-2.98-2.98-2.98h-77.02zm-105.72 0c-1.65 0-2.98 1.34-2.98 2.98v252.64c0 1.65 1.34 2.98 2.98 2.98h77.02c1.65 0 2.98-1.34 2.98-2.98v-35.52c0-1.65-1.34-2.98-2.98-2.98h-38.51v-214.13c0-1.65-1.34-2.98-2.98-2.98zm825.04 0h-35.53c-1.65 0-2.98 1.33-2.98 2.98v114.88l-22.74-114.88c0-1.65-1.34-2.98-2.98-2.98h-35.53c-1.65 0-2.98 1.33-2.98 2.98v252.64c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.33 2.98-2.98v-114.88l22.74 114.88c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.33 2.98-2.98v-252.63c.01-1.65-1.33-2.99-2.98-2.99zm221.4 85.82h35.52c1.65 0 2.98-1.34 2.98-2.98v-57.15c0-3.16-1.26-6.2-3.49-8.44l-13.76-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-54.34c-3.17 0-6.2 1.26-8.44 3.5l-13.75 13.75c-2.24 2.24-3.49 5.27-3.49 8.43v66.73c0 2.55.82 5.03 2.33 7.09l61.26 77.73c.41.53.64 1.18.64 1.84v35.05c0 1.65-1.34 2.98-2.98 2.98h-16.77c-1.65 0-2.98-1.34-2.98-2.98v-38.36c0-1.65-1.34-2.99-2.99-2.99h-35.52c-1.65 0-2.98 1.34-2.98 2.98v57.14c0 3.17 1.26 6.2 3.5 8.44l13.75 13.76c2.24 2.24 5.27 3.49 8.44 3.49h54.34c3.17 0 6.2-1.26 8.44-3.5l13.75-13.75c2.24-2.24 3.49-5.27 3.49-8.43v-66.73c0-2.55-.82-5.03-2.33-7.09l-61.26-77.73c-.41-.53-.64-1.18-.64-1.84v-35.05c0-1.65 1.34-2.98 2.98-2.98h16.77c1.65 0 2.98 1.34 2.98 2.98v38.36c.01 1.67 1.34 3 2.99 3zm-1075.14-85.82h-182.74c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.33 2.98 2.98 2.98h29.13v214.13c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.34 2.98-2.98v-214.12h41.49v214.13c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.34 2.98-2.98v-214.13h29.13c1.65 0 2.98-1.34 2.98-2.98v-35.53c.01-1.65-1.33-2.99-2.97-2.99zm-215.72 258.61h35.35c1.82 0 3.22-1.62 2.95-3.42l-37.7-252.64c-.22-1.46-1.47-2.54-2.95-2.54h-36.33c-1.48 0-2.74 1.09-2.95 2.56l-36.41 252.64c-.26 1.8 1.14 3.41 2.95 3.41h35.35c1.53 0 2.81-1.16 2.97-2.68l6.51-64.38h20.26l7.03 64.41c.17 1.5 1.45 2.64 2.97 2.64zm-28.63-108.55 8.77-76.39 8.77 76.39z">
+                          </path>
+                          <clipPath id="b">
+                            <use xlink:href="#a">
+                            </use>
+                          </clipPath>
+                        </defs>
+                        <use fill="#fff" xlink:href="#a">
+                        </use>
+                        <g clip-path="url(#b)">
+                          <path d="m195.51 479.68h1553.41v281.34h-1553.41z" fill="none" _ngcontent-fmq-c124=""></path>
+                        </g>
+                        <g fill="#fff">
+                          <path d="m1019.89 354.74v38.57c0 1.04-.84 1.88-1.88 1.88h-12.47v-42.34h12.47c1.04 0 1.88.85 1.88 1.89zm-1.88-70.42h-12.47v42.34h12.47c1.04 0 1.88-.84 1.88-1.88v-38.58c0-1.04-.84-1.88-1.88-1.88zm-162.14 0h-12.47v42.34h12.47c1.04 0 1.88-.84 1.88-1.88v-38.58c.01-1.04-.84-1.88-1.88-1.88zm307.03-7.38v39.36c0 1.04-.84 1.88-1.88 1.88h-7.68v43.13h7.68c1.04 0 1.88.84 1.88 1.88v39.36c0 1.04-.84 1.88-1.88 1.88h-7.68v41.25c0 1.04-.84 1.88-1.88 1.88h-358.49c-1.04 0-1.88-.84-1.88-1.88v-41.25h-7.68c-1.04 0-1.88-.84-1.88-1.88v-39.35c0-1.04.84-1.88 1.88-1.88h7.68v-42.74h-7.68c-1.04 0-1.88-.84-1.88-1.88v-39.76c0-1.04.84-1.88 1.88-1.88h7.68v-41.25c0-1.04.84-1.88 1.88-1.88h358.48c1.04 0 1.88.84 1.88 1.88v41.25h7.68c1.04 0 1.89.84 1.89 1.88zm-278.96-2.6c0-2-.79-3.91-2.21-5.33l-8.68-8.68c-1.41-1.41-3.33-2.21-5.33-2.21h-48.62c-1.04 0-1.88.84-1.88 1.88v66.65h-1.7c-1.04 0-1.88.84-1.88 1.88v22.43c0 1.04.84 1.88 1.88 1.88h1.7v66.65c0 1.04.84 1.88 1.88 1.88h22.42c1.04 0 1.88-.84 1.88-1.88v-66.65h24.32c2 0 3.91-.79 5.33-2.21l8.68-8.69c1.41-1.41 2.21-3.33 2.21-5.33zm81.07-14.34c0-1.04-.84-1.88-1.88-1.88h-22.42c-1.04 0-1.88.84-1.88 1.88v133.31c0 1.04-.84 1.88-1.88 1.88h-10.59c-1.04 0-1.88-.84-1.88-1.88v-133.31c0-1.04-.84-1.88-1.88-1.88h-22.42c-1.04 0-1.88.84-1.88 1.88v145.17c0 2 .79 3.91 2.21 5.33l8.68 8.69c1.41 1.41 3.33 2.21 5.33 2.21h34.3c2 0 3.91-.79 5.33-2.21l8.68-8.69c1.41-1.41 2.21-3.33 2.21-5.33v-145.17zm81.07 14.34c0-2-.79-3.91-2.21-5.33l-8.68-8.69c-1.41-1.41-3.33-2.21-5.33-2.21h-48.62c-1.04 0-1.88.84-1.88 1.88v66.65h-1.7c-1.04 0-1.88.84-1.88 1.88v22.43c0 1.04.84 1.88 1.88 1.88h1.7v66.65c0 1.04.84 1.88 1.88 1.88h48.63c2 0 3.91-.79 5.33-2.21l8.68-8.68c1.41-1.41 2.21-3.33 2.21-5.33v-49.2c0-2-.79-3.91-2.21-5.33l-10.89-10.89 10.89-10.89c1.41-1.41 2.21-3.33 2.21-5.33v-49.16zm81.07 0c0-2-.79-3.91-2.21-5.33l-8.68-8.68c-1.41-1.41-3.33-2.21-5.32-2.21h-34.3c-2 0-3.92.79-5.33 2.21l-8.68 8.68c-1.41 1.41-2.21 3.33-2.21 5.33v130.83c0 2 .79 3.91 2.21 5.33l8.68 8.69c1.41 1.41 3.33 2.21 5.32 2.21h34.3c2 0 3.91-.79 5.32-2.21l8.68-8.69c1.41-1.41 2.21-3.33 2.21-5.33v-76.63c0-1.04-.84-1.88-1.88-1.88h-11.37-18.22c-1.04 0-1.88.84-1.88 1.88v22.43c0 1.04.84 1.88 1.88 1.88h5.29v40.46c0 1.04-.84 1.88-1.88 1.88h-10.59c-1.04 0-1.88-.84-1.88-1.88v-107.11c0-1.04.84-1.88 1.88-1.88h10.59c1.04 0 1.88.84 1.88 1.88v24.22c0 1.04.84 1.88 1.88 1.88h22.42c1.04 0 1.88-.84 1.88-1.88v-36.08z">
+                          </path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class= "column-body">
+                        <div class="login-header-section horizontal-center">
+                            <a class="discord box btn" href="https://discord.com" role="button">
+                                <img
+                                  class="logo"
+                                  width="20px"
+                                  height="20px"
+                                  src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/icons/white/discord.svg"
+                                  alt="discord logo"
+                                />
+                            </a>
+                            <a class="btn facebook box" href="https://facebook.com" role="button">
+                            <img
+                                class="logo"
+                                width="20px"
+                                height="20px"
+                                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/icons/white/facebook.svg"
+                                alt="facebook logo"
+                            />
+                            </a>
+                            <a class="btn google box" href="https://google.com" role="button">
+                            <img
+                                class="logo"
+                                width="20px"
+                                height="20px"
+                                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/g-logo.svg"
+                                alt="google logo"
+                            />
+                            </a>
+                            <a class="btn reddit box" href="https://reddit.com" role="button">
+                            <img
+                                class="logo"
+                                width="20px"
+                                height="20px"
+                                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/icons/snoo_head.png"
+                                alt="reddit logo"
+                            />
+                            </a>
+                            <a
+                            class="btn oauth box"
+                            href="https://oauth.vk.com/authorize?response_type=code&redirect_uri=https%3A%2F%2Faccounts.pubg.com%2Fauth%2Fvk%2Fcallback&scope=email&state=J8DAeh7MWoRQGyc0ceaxCZTc&client_id=7112454"
+                            role="button"
+                            >
+                            <img
+                                class="logo"
+                                width="20px"
+                                height="20px"
+                                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/vk-logo.svg"
+                                alt="oauth logo"
+                            />
+                            </a>
+                            <a class="btn twitter box" href="https://twitter.com" role="button">
+                            <img
+                                class="logo"
+                                width="20px"
+                                height="20px"
+                                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/w_twitter.png"
+                                alt="twitter logo"
+                            />
+                            </a>
+                        </div>
+                        <div class="login-body-section">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" class="sr-only" style="font-size:14px;">EMAIL ADDRESS</label>
+                                    <input
+                                      type="text"
+                                      class="form-control bg-transparent"
+                                      id="exampleInputEmail1"
+                                      oninput="input_error()"
+                                      placeholder="EMAIL ADDRESS"
+                                      style="height: 80px; border-width: 0 0 3px 0; color: white;"  
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="sr-only" style="font-size:14px;">PASSWORD</label>
+                                    <input
+                                      type="text"
+                                      class="form-control bg-transparent"
+                                      id="exampleInputPassword1"
+                                      placeholder="PASSWORD"
+                                      ontype = ""
+                                      style="height: 80px; border-width: 0 0 3px 0; color: white;"
+                                      />
+                                </div>
+                                <div class="form-group col-sm-auto d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <input
+                                        type="checkbox"
+                                        class="form-check-input big-checkbox"
+                                        id="exampleCheck1"
+                                      />
+                                      <label class="form-check-label" for="exampleCheck1" style="padding-left:20px; color: #A2A1A1;"
+                                        >REMEMBER EMAIL</label
+                                      >
+                                    </div>
+                                    <div class="form-check">
+                                      <a href="https://naver.com" id="forgot"> FORGOT YOUR PASSWORD</a>
+                                    </div>
+                                </div>
+                                <div class="form-group horizontal-center">
+                                    <a
+                                        href="#"
+                                        class="btn vertical-horizontal-center"
+                                        style="width: 500px; height: 55px; background-color: #F8B504; color: black;"
+                                        ><strong>LOGIN</strong></a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-bottom-section">
+                            <div class="form-row horizontal-center" style="color: white;">
+                                <p>DON'T HAVE AN ACCOUNT?</p>
+                            </div>
+                            <div class="form-row">
+                                <a
+                                href="#"
+                                class="btn text-warning border-yellow-thick vertical-horizontal-center"
+                                style="width: 500px; height: 60px;"
+                                ><strong>CREATE MY ACCOUNT</strong></a
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-2 align-self-center">
+                    <div class="horizontal-center">
+                      <img height="65px" width="180px" alt="PUBG Krafton Logo" src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/PUBG_Studio_Krafton_Lockup_White.png">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                  <address style="font-size: 13px;">
+                    ©2021 KRAFTON, Inc. All rights reserved<br />
+                    PUBG is a registered trademark or service mark of KRAFTON, Inc.<br />
+                    <br />
+                    Partnership Inquiry:  PUBG_inquiry@pubg.com<br />
+                    <br />
+                    <strong>Privacy Policy</strong>&nbsp &nbsp &nbsp | &nbsp &nbsp Terms of Service &nbsp &nbsp | &nbsp &nbsp Rules  of conduct &nbsp &nbsp | &nbsp &nbsp <strong> Privacy Notice for California Residents</strong>
+                  </address>
+                </div>
+                <div class="col-sm-2 align-self-center">
+                  <div class="horizontal-center">
+                    <img height="59px" width="125px" alt="ESRB advisory Violence Blood" src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/esrb.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/991fc82bc5.js" crossorigin="anonymous"></script>
+    <!-- endbuild -->
+  </body>
+</html>

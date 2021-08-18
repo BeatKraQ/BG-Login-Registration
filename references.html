@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/references.css" rel="stylesheet">
+
+    <!-- 구글폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <title>SW사관학교 정글 | 부트스트랩 연습하기</title>
+
+    <!-- style -->
+
+    <script>
+      function language_conv_eng() {
+        let register = "REGISTER";
+        let email_address = "EMAIL ADDRESS";
+        let password = "PASSWORD";
+        let remember_email = "Remember Email";
+        let forgot_your_password = "Forgot your password";
+        let login = "LOGIN";
+        let dont_have_an_account = "DON'T HAVE AN ACCOUNT";
+        let create_my_account = "CREATE MY ACCOUNT";
+
+        $("#registration").text(register);
+        $("#exampleInputEmail1").attr("placeholder", email_address);
+        $("#exampleInputPassword1").attr("placeholder", password);
+        $("#email_address").text(email_address);
+        $("#password1").text(password);
+        $("label.form-check-label").text(remember_email);
+        $("#forgot").text(forgot_your_password);
+        $("#login>a").text(login);
+        $("h1.big-font").text(dont_have_an_account);
+        $("#no-account>a").text(create_my_account);
+      }
+
+      function language_conv_ko() {
+        let register = "가입";
+        let email_address = "이메일 주소";
+        let password = "비밀번호";
+        let remember_email = "이메일 기억하기";
+        let forgot_your_password = "비밀번호를 잊으셨나요?";
+        let login = "로그인";
+        let dont_have_an_account = "계정이 없으신가요?";
+        let create_my_account = "내 계정 만들기";
+
+        $("#registration").text(register);
+        $("#exampleInputEmail1").attr("placeholder", email_address);
+        $("#exampleInputPassword1").attr("placeholder", password);
+        $("#email_address").text(email_address);
+        $("#password1").text(password);
+        $("label.form-check-label").text(remember_email);
+        $("#forgot").text(forgot_your_password);
+        $("#login>a").text(login);
+        $("h1.big-font").text(dont_have_an_account);
+        $("#no-account>a").text(create_my_account);
+      }
+
+      function language_conv_jp() {
+        let register = "登録";
+        let email_address = "メールアドレス";
+        let password = "パスワード";
+        let remember_email = "メールアドレスを保存する";
+        let forgot_your_password = "パスワードをお忘れですか？";
+        let login = "ログイン";
+        let dont_have_an_account = "アカウントがありませんか？";
+        let create_my_account = "アカウントを作る";
+
+        $("#registration").text(register);
+        $("#email_address").text(email_address);
+        $("#exampleInputEmail1").attr("placeholder", email_address);
+        $("#exampleInputPassword1").attr("placeholder", password);
+        $("#password1").text(password);
+        $("label.form-check-label").text(remember_email);
+        $("#forgot").text(forgot_your_password);
+        $("#login>a").text(login);
+        $("h1.big-font").text(dont_have_an_account);
+        $("#no-account>a").text(create_my_account);
+      }
+
+      function input_error(){
+        let email_address_a = $("#exampleInputEmail1").val();
+        var emailReg = new RegExp(/^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/)
+      
+        if (emailReg.test(email_address_a)){
+        $("#exampleInputEmail1").attr("class", "form-control bg-transparent");
+        }
+        else{
+        $("#exampleInputEmail1").attr("class", "form-control is-invalid bg-transparent");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="container-wrapper" id="container-wrapper">
+      <div class="video-sub">
+        <video
+          loop
+          muted
+          autoplay
+          class="video"
+          poster="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/account-login.jpg"
+        >
+          <source
+            type="video/webm"
+            srcc="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/video/account-login.webm"
+          />
+          <source
+            type="video/mp4"
+            src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/video/account-login.mp4"
+          />
+        </video>
+      </div>
+      <div class="top-container">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" id="registration" href="/registration" style="color:white;">가입</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              style="color:white; font-size:30px;"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-globe"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"
+                />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" onclick="language_conv_eng()" href="#"
+                >English</a
+              >
+              <a class="dropdown-item" href="#" onclick="language_conv_ko()"
+                >한국어</a
+              >
+              <a class="dropdown-item" href="#" onclick="language_conv_jp()"
+                >日本語</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="body-container center-a">
+        <div class="logo center-a">
+          <img
+            src="https://iconape.com/wp-content/png_logo_vector/pubg-player-unkwons-battleground-logo.png"
+            alt="Card image cap"
+          />
+        </div>
+
+        <div class="wrap">
+          <div class="d-flex justify-content-center">
+            <a class="discord box" href="https://discord.com" role="button">
+              <img
+                class="logo"
+                width="20px"
+                height="20px"
+                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/icons/white/discord.svg"
+                alt="discord logo"
+              />
+            </a>
+            <a class="facebook box" href="https://facebook.com" role="button">
+              <img
+                class="logo"
+                width="20px"
+                height="20px"
+                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/icons/white/facebook.svg"
+                alt="facebook logo"
+              />
+            </a>
+            <a class="google box" href="https://google.com" role="button">
+              <img
+                class="logo"
+                width="20px"
+                height="20px"
+                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/g-logo.svg"
+                alt="google logo"
+              />
+            </a>
+            <a class="reddit box" href="https://reddit.com" role="button">
+              <img
+                class="logo"
+                width="20px"
+                height="20px"
+                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/icons/snoo_head.png"
+                alt="reddit logo"
+              />
+            </a>
+            <a
+              class="oauth box"
+              href="https://oauth.vk.com/authorize?response_type=code&redirect_uri=https%3A%2F%2Faccounts.pubg.com%2Fauth%2Fvk%2Fcallback&scope=email&state=J8DAeh7MWoRQGyc0ceaxCZTc&client_id=7112454"
+              role="button"
+            >
+              <img
+                class="logo"
+                width="20px"
+                height="20px"
+                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/vk-logo.svg"
+                alt="oauth logo"
+              />
+            </a>
+            <a class="twitter box" href="https://twitter.com" role="button">
+              <img
+                class="logo"
+                width="20px"
+                height="20px"
+                src="https://pubgisd-cdn.akamaized.net/live/global-account-management/assets/img/w_twitter.png"
+                alt="twitter logo"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="form-wrap">
+          <div class="form-group left-a" style="height: 86px;">
+            <label for="exampleFormControlInput1" class="form-label" style="font-size:14px;">이메일 주소</label>
+            <input
+              type="text"
+              class="form-control bg-transparent"
+              id="exampleInputEmail1"
+              oninput="input_error()"
+              placeholder="이메일 주소"
+              aria-label="이메일 주소"
+              style="height: 70px; border-width: 0 0 3px 0; color: white;"  
+            />
+          </div>
+          <div class="form-group left-a" id="password" style="height: 86px;">
+            <label for="exampleFormControlInput1" class="form-label" style="font-size:14px;">비밀번호</label>
+            <input
+              type="text"
+              class="form-control bg-transparent"
+              id="exampleInputPassword1"
+              placeholder="패스워드"
+              ontype = ""
+              style="height: 70px; border-width: 0 0 3px 0; color: white;"  
+            />
+          </div>
+          <div
+            class="form-group form-check d-flex justify-content-between"
+            id="check-forget"
+            style = "padding-top: 65px;"
+          >
+            <input
+              type="checkbox"
+              class="form-check-input big-checkbox"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1" style="padding-left:20px;"
+              >이메일 기억하기</label
+            >
+            <a href="https://naver.com" id="forgot"> 비밀번호를 잊으셨나요?</a>
+          </div>
+          <div class="center-a" id="login">
+            <a
+              href="#"
+              class="btn btn-warning text-dark"
+              style="width: 500px; height: 55px; font-size: 27px"
+              >로그인</a
+            >
+          </div>
+        </div>
+
+        <div class="center-a" id="no-account">
+          <h1 class="big-font">계정이 없으신가요?</h1>
+          <a
+            href="#"
+            class="btn text-warning border-yellow-thick"
+            style="width: 500px; height: 55px; font-size: 27px"
+            >내 계정 만들기</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

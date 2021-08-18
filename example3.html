@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    <select id="year"></select>
+    <select id="month"></select>
+    <select id="day"></select>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/991fc82bc5.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    <script>
+      $(document).ready(function() {
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        let qntYears = 60;
+        let selectYear = $("#year");
+        let selectMonth = $("#month");
+        let selectDay = $("#day");
+        let currentYear = new Date().getFullYear();
+      
+        for (var y = 0; y < qntYears; y++) {
+          let date = new Date(currentYear);
+          let yearElem = document.createElement("option");
+          yearElem.value = currentYear
+          yearElem.textContent = currentYear;
+          selectYear.append(yearElem);
+          currentYear--;
+        }
+      
+        for (var m = 0; m < 12; m++) {
+          let month = monthNames[m];
+          let monthElem = document.createElement("option");
+          monthElem.value = m;
+          monthElem.textContent = month;
+          selectMonth.append(monthElem);
+        }
+      
+        var d = new Date();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        var day = d.getDate();
+      
+        selectYear.val(year);
+        selectYear.on("change", AdjustDays);
+        selectMonth.val(month);
+        selectMonth.on("change", AdjustDays);
+      
+        AdjustDays();
+        selectDay.val(day)
+      
+        function AdjustDays() {
+          var year = selectYear.val();
+          var month = parseInt(selectMonth.val()) + 1;
+          selectDay.empty();
+      
+          //get the last day, so the number of days in that month
+          var days = new Date(year, month, 0).getDate();
+      
+          //lets create the days of that month
+          for (var d = 1; d <= days; d++) {
+            var dayElem = document.createElement("option");
+            dayElem.value = d;
+            dayElem.textContent = d;
+            selectDay.append(dayElem);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
