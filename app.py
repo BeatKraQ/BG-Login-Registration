@@ -12,7 +12,7 @@ import json
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb://beatkraq:1436@3.36.88.26', 27017) 
+client = MongoClient('..', ..) 
 db = client.dbtest2
 app.secret_key='whateveritis'
 s = URLSafeTimedSerializer(app.secret_key)
@@ -65,7 +65,7 @@ def post_information():
 
         msg = EmailMessage()
         msg['Subject'] = 'PUBG Global Account Activation (Replica)'
-        msg['From'] = "stanfm95@gmail.com"
+        msg['From'] = "..m"
         msg['To'] = email_receive
         msg.set_content('Confirmation please')
 
@@ -73,7 +73,7 @@ def post_information():
 
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
 
-            smtp.login("stanfm95@gmail.com", os.getenv('pswd1'))
+            smtp.login("..", os.getenv('pswd1'))
             smtp.send_message(msg)
 
         return render_template("verification.html", email=email_receive, pswd= pswd_receive, user=user_receive, month=month_receive, day=day_receive, year=year_receive, d1=d1)
@@ -92,7 +92,7 @@ def resend_email():
 
     msg = EmailMessage()
     msg['Subject'] = 'PUBG Global Account Activation: Resent (Replica)'
-    msg['From'] = "stanfm95@gmail.com"
+    msg['From'] = ".."
     msg['To'] = email_receive
     msg.set_content('Confirmation please')
 
@@ -100,7 +100,7 @@ def resend_email():
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
 
-        smtp.login("stanfm95@gmail.com", os.getenv('pswd1'))
+        smtp.login("..", os.getenv('pswd1'))
         smtp.send_message(msg)
 
     return jsonify({'result': 'success'})
