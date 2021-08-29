@@ -12,11 +12,10 @@
 
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
     <!-- Optional JavaScript -->
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   </head>
@@ -44,7 +43,7 @@
         <nav class="navbar">
           <div class= "container justify-content-end">
             <div class="registration">
-              <a class="navbar-item" id="login-registration" href="/register.html">
+              <a class="navbar-item" id="login-registration" href="{{ url_for('registration') }}">
                 <i class="fas fa-user-circle" style="font-size: 1.1em"></i></span>&nbsp REGISTER</a>
             </div>
             <div class="dropdown">
@@ -69,23 +68,35 @@
                   />
                 </svg>
               </a>
-              <ul class= "dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuOffset" style="margin-top: 10px; margin-right: -20px">
-                <li><a class="dropdown-item" href="#"
-                >English</a></li
-                >
-                <li><a class="dropdown-item" href="#"
-                    >한국어</a></li
-                >
-                <li><a class="dropdown-item" href="#"
-                    >日本語</a></li
-                >
+              <ul class= "dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuOffset" style="margin-top: 10px; margin-right: -20px; background-color: #161616;">
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">English</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">简体中文</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">繁體中文</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Français</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Deutsch</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">हिंदी</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">اُردُو</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">اَلْعَرَبِيَّةُ</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Italiano</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">日本語</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">한국어</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">ไทย</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">polski</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Português</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Português[BR]</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Русский</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">TÜRKÇE</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Español [AL]</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Español [ES]</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Indonesian</a></li>
+                <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Tiếng Việt</a></li>
               </ul>
             </div>
           </div>
         </nav>
         <div class="container form-container">
             <div class="column">
-                <form>
+                <form action="/authentication" onsubmit ="return loginForm()" method="POST">
                     <div class= "bg-logo horizontal-center">
                       <svg width="350px" height="187px" enable-background="new 0 0 1944.42 992.13" viewBox="0 0 1944.42 992.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -168,32 +179,42 @@
                             />
                             </a>
                         </div>
+                        <div class="form-row" style="padding-top: 10px;">
+                          <span id = "block" style="display:none;">{{ error }}</span>
+                          <div class="horizontal-center" id="accountAlert" style="background-color: rgb(255, 30, 30, 0.3); height: 50px; line-height: 40px; color: #df3123; display: none;">
+                              <span style="display: inline-block; vertical-align: middle; line-height:normal;">Can't find an account with that email and password.</span>
+                          </div>
+                        </div>
                         <div class="login-body-section">
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1" class="sr-only" style="font-size:14px;">EMAIL ADDRESS</label>
+                                <div style="min-height: 110px;">
+                                    <label for="userN" class="sr-only" style="font-size:14px;">EMAIL ADDRESS</label>
                                     <input
                                       type="text"
-                                      class="form-control bg-transparent"
-                                      id="exampleInputEmail1"
-                                      oninput="input_error()"
-                                      placeholder="EMAIL ADDRESS"
-                                      style="height: 80px; border-width: 0 0 3px 0; color: white;"  
+                                      class="form-control bg-transparent rounded-0 col-12 ffocus"
+                                      id="userN"
+                                      name="user_give"
+                                      oninput="userF()"
+                                      placeholder="USERNAME"
+                                      style="height: 80px; border-width: 0 0 3px 0; color: white; border-color:#484d52;"  
                                     />
+                                    <span id="user_msg" class="col-12"style="color: red; font-size:13px; display:none;">Email is required</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1" class="sr-only" style="font-size:14px;">PASSWORD</label>
+                                <div style="min-height: 110px;">
+                                    <label for="pswd1" class="sr-only" style="font-size:14px;">PASSWORD</label>
                                     <input
-                                      type="text"
-                                      class="form-control bg-transparent"
-                                      id="exampleInputPassword1"
+                                      type="password"
+                                      class="form-control bg-transparent rounded-0 ffocus"
+                                      id="pswd1"
                                       placeholder="PASSWORD"
-                                      ontype = ""
-                                      style="height: 80px; border-width: 0 0 3px 0; color: white;"
+                                      oninput="pswdF()"
+                                      name="pswd_give"
+                                      style="height: 80px; border-width: 0 0 3px 0; color: white; border-color:#484d52;"
                                       />
+                                      <span id="pswd_msg" class="col-12"style="color: red; font-size:13px; display:none;">Password is required</span>
                                 </div>
                                 <div class="form-group col-sm-auto d-flex justify-content-between">
-                                    <div class="form-check">
+                                    <div class="form-check d-flex align-items-center">
                                         <input
                                         type="checkbox"
                                         class="form-check-input big-checkbox"
@@ -204,16 +225,16 @@
                                       >
                                     </div>
                                     <div class="form-check">
-                                      <a href="https://naver.com" id="forgot"> FORGOT YOUR PASSWORD</a>
+                                      <a href="https://www.webmd.com/brain/memory-loss" id="forgot"> FORGOT YOUR PASSWORD</a>
                                     </div>
                                 </div>
                                 <div class="form-group horizontal-center">
-                                    <a
-                                        href="#"
-                                        class="btn vertical-horizontal-center"
+                                    <input
+                                        type="submit"
+                                        class="btn vertical-horizontal-center font-bold"
+                                        value="LOGIN"
                                         style="width: 500px; height: 55px; background-color: #F8B504; color: black;"
-                                        ><strong>LOGIN</strong></a
-                                    >
+                                        >
                                 </div>
                             </div>
                         </div>
@@ -223,7 +244,7 @@
                             </div>
                             <div class="form-row">
                                 <a
-                                href="#"
+                                href="{{ url_for('registration') }}"
                                 class="btn text-warning border-yellow-thick vertical-horizontal-center"
                                 style="width: 500px; height: 60px;"
                                 ><strong>CREATE MY ACCOUNT</strong></a
@@ -249,7 +270,7 @@
                     <br />
                     Partnership Inquiry:  PUBG_inquiry@pubg.com<br />
                     <br />
-                    <strong>Privacy Policy</strong>&nbsp &nbsp &nbsp | &nbsp &nbsp Terms of Service &nbsp &nbsp | &nbsp &nbsp Rules  of conduct &nbsp &nbsp | &nbsp &nbsp <strong> Privacy Notice for California Residents</strong>
+                    <strong>Privacy Policy </strong>&nbsp &nbsp &nbsp | &nbsp &nbsp Terms of Service &nbsp &nbsp | &nbsp &nbsp Rules  of conduct &nbsp &nbsp | &nbsp &nbsp <strong> Privacy Notice for California Residents</strong>
                   </address>
                 </div>
                 <div class="col-sm-2 align-self-center">
@@ -264,8 +285,55 @@
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- build:js js/main.js -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/991fc82bc5.js" crossorigin="anonymous"></script>
+    <script>
+      function loginForm(){
+        username = document.getElementById("userN").value
+        pw1 = document.getElementById("userN").value
+
+        if (username=="") {
+          document.getElementById("user_msg").style.display="block";
+          document.getElementById("userN").style.borderColor = "#df3123";
+          document.getElementById("userN").classList.remove("ffocus");
+        }
+
+        if (pw1=="") {
+          document.getElementById("pswd_msg").style.display="block";
+          document.getElementById("pswd1").style.borderColor = "#df3123";
+          document.getElementById("pswd1").classList.remove("ffocus");
+        }
+
+        if (username=="" || pswd==""){
+          return false;
+        }
+      }
+    </script>
+    <script>
+      function userF(){
+        username = document.getElementById("userN").value
+        if (username!="") {
+          document.getElementById("user_msg").style.display="none";
+          document.getElementById("userN").classList.add("ffocus");
+          document.getElementById("userN").style.borderColor = "#484d52";
+      }
+    }
+      function pswdF(){
+        pw1 = document.getElementById("pswd1").value
+        if (pw1!="") {
+          document.getElementById("pswd_msg").style.display="none";
+          document.getElementById("pswd1").classList.add("ffocus");
+          document.getElementById("pswd1").style.borderColor = "#484d52";
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function(){
+        if ($('#block').html()=='block') {
+          $('#accountAlert').css('display','block');
+        }
+      });
+    </script>
     <!-- endbuild -->
   </body>
 </html>

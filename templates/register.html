@@ -12,12 +12,10 @@
 
     <!-- Bootstrap CSS -->
     <!-- build:css css/main.css -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Oswald&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
     <!-- Optional JavaScript -->
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   </head>
@@ -34,7 +32,7 @@
         <nav class="navbar">
         <div class= "container justify-content-between">
             <div id="small-logo">
-                <a href="/index.html">
+                <a href="/">
                     <svg width="145px" height="74px" enable-background="new 0 0 1944.42 992.13" viewBox="0 0 1944.42 992.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
                         <path id="a" d="m1349.18 491.04h-35.53c-1.65 0-2.98 1.34-2.98 2.98v211.15c0 1.65-1.34 2.98-2.98 2.98h-16.77c-1.65 0-2.98-1.34-2.98-2.98v-211.14c0-1.65-1.34-2.98-2.98-2.98h-35.53c-1.65 0-2.98 1.34-2.98 2.98v229.93c0 3.17 1.26 6.2 3.49 8.44l13.76 13.76c2.24 2.24 5.27 3.49 8.44 3.49h54.35c3.17 0 6.2-1.26 8.44-3.49l13.75-13.76c2.24-2.24 3.49-5.27 3.49-8.44v-229.93c-.01-1.65-1.34-2.99-2.99-2.99zm-382.4 232.92c0 3.16-1.26 6.2-3.49 8.44l-13.76 13.76c-2.24 2.24-5.27 3.49-8.44 3.49h-54.35c-3.16 0-6.2-1.26-8.44-3.49l-13.76-13.76c-2.24-2.24-3.49-5.27-3.49-8.44v-207.23c0-3.16 1.26-6.2 3.49-8.44l13.75-13.75c2.24-2.24 5.28-3.5 8.44-3.5h54.34c3.16 0 6.2 1.26 8.44 3.49l13.75 13.76c2.24 2.24 3.5 5.27 3.5 8.44v57.15c0 1.65-1.34 2.98-2.98 2.98h-35.52c-1.65 0-2.98-1.34-2.98-2.98v-38.36c0-1.65-1.34-2.98-2.98-2.98h-16.77c-1.65 0-2.98 1.34-2.98 2.98v169.66c0 1.65 1.34 2.98 2.98 2.98h16.77c1.65 0 2.98-1.34 2.98-2.98v-64.08h-8.39c-1.65 0-2.98-1.34-2.98-2.98v-35.52c0-1.65 1.34-2.98 2.98-2.98h28.88 18.02c1.65 0 2.98 1.34 2.98 2.98v121.36zm-671.44-229.42c-2.24-2.24-5.27-3.49-8.44-3.49h-77.05c-1.65 0-2.98 1.34-2.98 2.98v105.57h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v105.57c0 1.65 1.34 2.98 2.98 2.98h77.05c3.16 0 6.2-1.26 8.44-3.5l13.75-13.76c2.24-2.24 3.5-5.27 3.5-8.44v-77.92c0-3.17-1.26-6.2-3.5-8.44l-17.25-17.25 17.25-17.25c2.24-2.24 3.5-5.27 3.5-8.44v-77.93c0-3.17-1.26-6.2-3.5-8.44zm-24.24 210.64c0 1.65-1.34 2.98-2.98 2.98h-19.76v-67.06h19.76c1.65 0 2.98 1.34 2.98 2.98zm0-108.56c0 1.65-1.34 2.98-2.98 2.98h-19.76v-67.07h19.76c1.65 0 2.98 1.34 2.98 2.98zm824.14-1.96v-77.93c0-3.17-1.26-6.2-3.5-8.44l-13.75-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-77.05c-1.65 0-2.98 1.34-2.98 2.98v105.58h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v105.57c0 1.65 1.34 2.98 2.98 2.98h35.52c1.65 0 2.98-1.34 2.98-2.98v-105.56h19.76c1.65 0 2.98 1.34 2.98 2.98v102.59c0 1.65 1.34 2.98 2.98 2.98h35.52c1.65 0 2.98-1.34 2.98-2.98v-100.63c0-3.17-1.26-6.2-3.5-8.44l-17.25-17.25 17.25-17.25c2.26-2.24 3.52-5.27 3.52-8.44zm-44.47 4.94h-19.76v-67.07h19.76c1.65 0 2.98 1.34 2.98 2.98v61.1c0 1.66-1.34 2.99-2.98 2.99zm554.82-91.3-13.76-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-77.05c-1.65 0-2.98 1.34-2.98 2.98v252.64c0 1.65 1.34 2.98 2.98 2.98h77.05c3.16 0 6.2-1.26 8.44-3.5l13.75-13.75c2.24-2.24 3.49-5.27 3.49-8.44v-207.23c.02-3.16-1.24-6.2-3.48-8.43zm-37.99 196.88c0 1.65-1.34 2.98-2.98 2.98h-19.76v-175.62h19.76c1.65 0 2.98 1.34 2.98 2.98zm-341.2-105.58h-2.7v-82.87c0-3.17-1.26-6.2-3.49-8.44l-13.76-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-54.34c-3.17 0-6.2 1.26-8.44 3.49l-13.75 13.76c-2.24 2.24-3.49 5.27-3.49 8.44v82.87h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v82.87c0 3.17 1.26 6.2 3.49 8.44l13.75 13.76c2.24 2.24 5.28 3.49 8.44 3.49h54.34c3.17 0 6.2-1.26 8.44-3.49l13.76-13.76c2.24-2.24 3.49-5.27 3.49-8.44v-82.87h2.7c1.65 0 2.98-1.34 2.98-2.98v-35.53c.01-1.64-1.33-2.98-2.98-2.98zm-44.19 105.58c0 1.65-1.34 2.98-2.98 2.98h-16.77c-1.65 0-2.98-1.34-2.98-2.98v-169.66c0-1.65 1.34-2.98 2.98-2.98h16.77c1.65 0 2.98 1.34 2.98 2.98zm-423.89-214.14c-1.65 0-2.98 1.34-2.98 2.98v105.58h-2.7c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.34 2.98 2.98 2.98h2.7v105.57c0 1.65 1.34 2.98 2.98 2.98h77.02c1.65 0 2.98-1.34 2.98-2.98v-35.52c0-1.65-1.34-2.98-2.98-2.98h-38.51v-67.06h38.51c1.65 0 2.98-1.34 2.98-2.98v-35.53c0-1.65-1.34-2.98-2.98-2.98h-38.51v-67.07h38.51c1.65 0 2.98-1.34 2.98-2.98v-35.52c0-1.65-1.34-2.98-2.98-2.98h-77.02zm-105.72 0c-1.65 0-2.98 1.34-2.98 2.98v252.64c0 1.65 1.34 2.98 2.98 2.98h77.02c1.65 0 2.98-1.34 2.98-2.98v-35.52c0-1.65-1.34-2.98-2.98-2.98h-38.51v-214.13c0-1.65-1.34-2.98-2.98-2.98zm825.04 0h-35.53c-1.65 0-2.98 1.33-2.98 2.98v114.88l-22.74-114.88c0-1.65-1.34-2.98-2.98-2.98h-35.53c-1.65 0-2.98 1.33-2.98 2.98v252.64c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.33 2.98-2.98v-114.88l22.74 114.88c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.33 2.98-2.98v-252.63c.01-1.65-1.33-2.99-2.98-2.99zm221.4 85.82h35.52c1.65 0 2.98-1.34 2.98-2.98v-57.15c0-3.16-1.26-6.2-3.49-8.44l-13.76-13.76c-2.24-2.24-5.27-3.49-8.44-3.49h-54.34c-3.17 0-6.2 1.26-8.44 3.5l-13.75 13.75c-2.24 2.24-3.49 5.27-3.49 8.43v66.73c0 2.55.82 5.03 2.33 7.09l61.26 77.73c.41.53.64 1.18.64 1.84v35.05c0 1.65-1.34 2.98-2.98 2.98h-16.77c-1.65 0-2.98-1.34-2.98-2.98v-38.36c0-1.65-1.34-2.99-2.99-2.99h-35.52c-1.65 0-2.98 1.34-2.98 2.98v57.14c0 3.17 1.26 6.2 3.5 8.44l13.75 13.76c2.24 2.24 5.27 3.49 8.44 3.49h54.34c3.17 0 6.2-1.26 8.44-3.5l13.75-13.75c2.24-2.24 3.49-5.27 3.49-8.43v-66.73c0-2.55-.82-5.03-2.33-7.09l-61.26-77.73c-.41-.53-.64-1.18-.64-1.84v-35.05c0-1.65 1.34-2.98 2.98-2.98h16.77c1.65 0 2.98 1.34 2.98 2.98v38.36c.01 1.67 1.34 3 2.99 3zm-1075.14-85.82h-182.74c-1.65 0-2.98 1.34-2.98 2.98v35.53c0 1.65 1.33 2.98 2.98 2.98h29.13v214.13c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.34 2.98-2.98v-214.12h41.49v214.13c0 1.65 1.34 2.98 2.98 2.98h35.53c1.65 0 2.98-1.34 2.98-2.98v-214.13h29.13c1.65 0 2.98-1.34 2.98-2.98v-35.53c.01-1.65-1.33-2.99-2.97-2.99zm-215.72 258.61h35.35c1.82 0 3.22-1.62 2.95-3.42l-37.7-252.64c-.22-1.46-1.47-2.54-2.95-2.54h-36.33c-1.48 0-2.74 1.09-2.95 2.56l-36.41 252.64c-.26 1.8 1.14 3.41 2.95 3.41h35.35c1.53 0 2.81-1.16 2.97-2.68l6.51-64.38h20.26l7.03 64.41c.17 1.5 1.45 2.64 2.97 2.64zm-28.63-108.55 8.77-76.39 8.77 76.39z">
@@ -58,7 +56,7 @@
             </div>
             <div id="login-language">
                 <div class="login d-inline">
-                    <a class="navbar-item" id="login-registration" href="/index.html">
+                    <a class="navbar-item" id="login-registration" href="{{ url_for('home') }}">
                         <i class="fas fa-user-circle" style="font-size: 1.1em"></i></span>&nbsp &nbsp LOGIN</a>
                 </div>
                 <div class="dropdown d-inline">
@@ -83,16 +81,28 @@
                         />
                         </svg>
                     </a>
-                    <ul class= "dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuOffset" style="margin-top: 10px; margin-right: -20px">
-                        <li><a class="dropdown-item" href="#"
-                        >English</a></li
-                        >
-                        <li><a class="dropdown-item" href="#"
-                            >한국어</a></li
-                        >
-                        <li><a class="dropdown-item" href="#"
-                            >日本語</a></li
-                        >
+                    <ul class= "dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuOffset" style="margin-top: 10px; margin-right: -20px; background-color: #161616;">
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">English</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">简体中文</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">繁體中文</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Français</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Deutsch</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">हिंदी</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">اُردُو</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">اَلْعَرَبِيَّةُ</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Italiano</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">日本語</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">한국어</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">ไทย</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">polski</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Português</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Português[BR]</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Русский</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">TÜRKÇE</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Español [AL]</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Español [ES]</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Indonesian</a></li>
+                        <li><a class="dropdown-item" href="#" style="text-align: right; color: #F1F1F1;">Tiếng Việt</a></li>
                     </ul>
                 </div>
             </div>
@@ -161,8 +171,8 @@
                                 <div class="container">
                                     <div class = "row justify-content-center">
                                         <div class = "col-12 col-sm-11">
-                                            <form action="/verification.html" onsubmit ="return validateForm()">
-                                                <div class="form-row">
+                                            <form action="/register" onsubmit ="return validateForm()" method="POST">
+                                                <div class="form-row" style="padding-bottom:10px;">
                                                     <a class="discord box btn" href="https://discord.com" role="button">
                                                         <img
                                                         class="logo"
@@ -222,98 +232,117 @@
                                                     />
                                                     </a>
                                                 </div>
+                                                <span id="block" style="display: none;">{{error}}</span>
+                                                <div class="form-row">
+                                                    <div class="horizontal-center" id="termsAlert" style="background-color: rgb(255, 30, 30, 0.3); height: 50px; line-height: 40px; color: #df3123; display:none;">
+                                                        <span style="display: inline-block; vertical-align: middle; line-height:normal;">You must accept the terms.</span>
+                                                    </div>
+                                                    <div class="horizontal-center" id="dateAlert" style="background-color: rgb(255, 30, 30, 0.3); height: 50px; line-height: 40px; color: #df3123; display:none;">
+                                                        <span style="display: inline-block; vertical-align: middle; line-height:normal;">Please enter a valid date of birth.</span>
+                                                    </div>
+                                                    <div class="horizontal-center" id="accountAlert" style="background-color: rgb(255, 30, 30, 0.3); height: 50px; line-height: 40px; color: #df3123; display:none;">
+                                                        <span style="display: inline-block; vertical-align: middle; line-height:normal;">Existing username.</span>
+                                                    </div>
+                                                </div>
                                                 <div class="form-row" style="padding-top: 50px">
                                                     <div class="email form-terms">
                                                         <label for="emailAd" class="sr-only" style="font-size:14px;">EMAIL ADDRESS</label>
                                                         <input
                                                         type="text"
-                                                        class="form-control bg-transparent rounded-0"
+                                                        class="form-control bg-transparent rounded-0 ffocus"
                                                         id="emailAd"
                                                         placeholder="EMAIL ADDRESS"
+                                                        oninput="emailF()"
+                                                        name="email_give"
                                                         style="height: 80px; border-width: 0 0 3px 0; color: white; border-color:#484d52;" 
                                                         />
-                                                        <span id = "blankMsg" style="font-size: 12px; display: inline-block;"> </span>
+                                                        <span id = "blankMsg" style="font-size: 12px; display: none;">Please enter a valid email address.
+                                                        </span>
                                                     </div>
                                                     <div class="password form-terms">
                                                         <label for="pswd1" class="sr-only" style="font-size:14px;">PASSWORD</label>
                                                         <input
                                                         type="password"
-                                                        class="form-control bg-transparent rounded-0"
+                                                        class="form-control bg-transparent rounded-0 ffocus"
                                                         id="pswd1"
                                                         placeholder="PASSWORD"
                                                         value=""
+                                                        oninput="passwordF()"
+                                                        name= "pswd_give"
                                                         style="height: 80px; border-width: 0 0 3px 0; color: white; border-color:#484d52;"
                                                         />
-                                                        <div class="row col-8" id="msg" style="color: #A2A1A1;">
-                                                            <span id = "msg1" style="font-size: 13px; display: inline-block;"> </span> 
-                                                            <span id = "msg2" style="font-size: 13px; display: inline-block;"> </span> 
-                                                            <span id = "msg3" style="font-size: 13px; display: inline-block;"> </span> 
-                                                            <span id = "msg4" style="font-size: 13px; display: inline-block;"> </span>
+                                                        <div class="row col-12" id="msg" style="display: none; color:#A2A1A1">
+                                                            <span id = "msg1" style="font-size: 13px; display: inline-block;"><i class="fas fa-check" id="msg1c"></i>&nbsp Password length must be at least 8 characters.</span> 
+                                                            <span id = "msg2" style="font-size: 13px; display: inline-block;"><i class="fas fa-check" id="msg2c"></i>&nbsp Password must contain at least one letter.</span> 
+                                                            <span id = "msg3" style="font-size: 13px; display: inline-block;"><i class="fas fa-check" id="msg3c"></i>&nbsp Password must contain at least one number.</span> 
+                                                            <span id = "msg4" style="font-size: 13px; display: inline-block;"><i class="fas fa-check" id="msg4c"> </i>&nbsp Password must contain at least one special character.</span>
                                                         </div>
                                                     </div>
                                                     <div class="passwordConfirm form-terms">
                                                         <label for="pswd2" class="sr-only">CONFIRM PASSWORD</label>
                                                         <input
                                                         type="password"
-                                                        class="form-control bg-transparent rounded-0"
+                                                        class="form-control bg-transparent rounded-0 ffocus"
                                                         id="pswd2"
+                                                        oninput="passwordmatch()"
                                                         placeholder="CONFIRM PASSWORD"
                                                         value=""
                                                         style="height: 80px; border-width: 0 0 3px 0; color: white; border-color:#484d52;"  
                                                         />
-                                                        <span id = "message2" style="font-size: 13px;; display: inline-block;"> </span>
+                                                        <span id = "message2" style="font-size: 13px;; display: inline-block;">&nbsp Passwords must match</span>
                                                     </div>
                                                     <div class="username form-terms">
                                                         <label for="userN" class="sr-only">USERNAME</label>
                                                         <input
                                                         type="text"
-                                                        class="form-control bg-transparent rounded-0"
+                                                        class="form-control bg-transparent rounded-0 ffocus"
                                                         id="userN"
+                                                        oninput="usernameF()"
                                                         placeholder="USERNAME"
+                                                        name="user_give"
                                                         style="height: 80px; border-width: 0 0 3px 0; color: white; border-color:#484d52;"
                                                         />
-                                                        <div class="row col-8" id="charMsg" style="color: #A2A1A1;">
-                                                            <span id = "charMsg1" style="font-size: 13px; display: inline-block;"> </span>
-                                                            <span id = "charMsg2" style="font-size: 13px; display: inline-block;"> </span>
+                                                        <div class="row col-8" id="charMsg" style="display: none; color: #A2A1A1">
+                                                            <span id = "charMsg1" style="font-size: 13px; display: inline-block;"><i class="fas fa-check" id="charMsg1c"></i>&nbsp Username must be alphanumeric</span>
+                                                            <span id = "charMsg2" style="font-size: 13px; display: inline-block;"><i class="fas fa-check" id="charMsg2c"></i>&nbsp Username must be between 4-16 characters</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-row">
+                                                <div class="form-row" style = "padding-top: 20px;">
                                                     <p style="color: #9a9c9e;"> DATE OF BIRTH </p>
                                                 </div>
-                                                <div class="form-row d-flex d-inline">
+                                                <div class="form-row d-flex">
                                                     <div class="col-4">
-                                                        <div class="form-group col-11 d-grid">
-                                                            <div class="select-group d-grid" tabindex="-1" id="month">
-                                                                <select style="background-color: transparent; color:white; border:none;" class="month-select">
-                                                                    <option value="day" selected hidden disabled>MONTH</option>
+                                                        <div class="form-group col-11 d-grid align-items-start">
+                                                            <div class="select-group d-grid" id="month">
+                                                                <select id="select-month" tabindex="-1" style="background-color: transparent; color:white; border:none;" class="month-select" name="month_give">
                                                                 </select>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
-                                                        <div class="form-group col-11 d-grid">
+                                                        <div class="form-group col-11 d-grid align-items-start">
                                                             <div class="select-group d-grid" tabindex="-1" id="day">
-                                                                <select style="background-color: transparent; color:white; border:none;" class="day-select">
-                                                                    <option value="day" selected hidden disabled>DAY</option>
+                                                                <select id = "select-day" tabindex="-1" style="background-color: transparent; color:white; border:none;" class="day-select" name="day_give">
+                                                                    <option value="day" selected hidden>DAY</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group col-4 d-grid">
+                                                    <div class="form-group col-4 d-grid align-items-start">
                                                         <div class="select-group d-grid" tabindex="-1" id="year">
-                                                            <select style="background-color: transparent; color:white; border:none;" class="year-select">
-                                                                <option value="year" selected hidden disabled>YEAR</option>
+                                                            <select id="select-year" tabindex="-1" style="background-color: transparent; color:white; border:none;" class="year-select" name="year_give">
+                                                                <option value="year" selected hidden>YEAR</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-row check-all">
-                                                    <div class="d-flex align-items-center" style="height: 80px;" id="check-all">   
-                                                        <div class="col-1">                                      
+                                                    <div class="check d-flex align-items-center" style="height: 80px;" id="check-all">   
+                                                        <div class="checkc col-1">                                      
                                                             <input
                                                             type="checkbox"
-                                                            class="form-check-input big-checkbox"
+                                                            class="form-check-input big-checkbox rounded-0"
                                                             id="checkAll"
                                                             />
                                                         </div>
@@ -323,11 +352,12 @@
                                                             >
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center" style="height: 80px;">
-                                                        <div class="col-1">
+                                                    <div class="check d-flex align-items-center" style="height: 80px;">
+                                                        <div class="checkc col-1">
                                                             <input
                                                             type="checkbox"
-                                                            class="form-check-input big-checkbox"
+                                                            class="form-check-input big-checkbox rounded-0"
+                                                            name = "agreement"
                                                             id="terms"
                                                             />
                                                         </div>
@@ -337,11 +367,12 @@
                                                             >
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center" style="height: 80px;">
-                                                        <div class="col-1">
+                                                    <div class="check d-flex align-items-center" style="height: 80px;">
+                                                        <div class="checkc col-1">
                                                             <input
                                                             type="checkbox"
-                                                            class="form-check-input big-checkbox"
+                                                            class="form-check-input big-checkbox rounded-0"
+                                                            name = "agreement"
                                                             id="news"
                                                             />
                                                         </div>
@@ -430,8 +461,8 @@
 
           <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- build:js js/main.js -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/991fc82bc5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3b9ee7c531.js" crossorigin="anonymous"></script>
     <!-- endbuild -->
     <script>
         $(document).ready(function() {
@@ -466,8 +497,6 @@
           var year = d.getFullYear();
           var day = d.getDate();
         
-          selectYear.val(year);
-          selectYear.on("change", AdjustDays);
           selectMonth.val(month);
           selectMonth.on("change", AdjustDays);
         
@@ -475,7 +504,6 @@
           selectDay.val(day)
         
           function AdjustDays() {
-            var year = selectYear.val();
             var month = parseInt(selectMonth.val()) + 1;
             selectDay.empty();
         
@@ -490,108 +518,224 @@
               selectDay.append(dayElem);
             }
           }
-          $(".month-select>option").attr("style", "height:30px; background-color: #303438;");
-          $(".day-select>option").attr("style", "height:30px; background-color:#303438;");
-          $(".year-select>option").attr("style", "height:30px; background-color: #303438;");
+          $("#select-month").append("<option value='month' selected hidden>MONTH</option>");
+          $("#select-day").append("<option value='day' selected hidden>DAY</option>");
+          $("#select-year").append("<option value='year' selected hidden>YEAR</option>");
+
         });
       </script>
       <script>
-        $("#checkAll").click(function(){
-            $('#terms').not(this).prop('checked', this.checked);
-            $('#news').not(this).prop('checked', this.checked);
-        });        
+
+        var $checkAll = $('#checkAll')
+        $checkAll.change(function(){
+            var $this = $(this);
+            var checked = $this.prop('checked')
+            $('input[name="agreement"]').prop('checked', checked);
+        });
+
+        var boxes=  $('input[name="agreement"]');
+        boxes.change(function(){
+            var boxLength = boxes.length;
+            var checkedLength = $('input[name="agreement"]:checked').length;
+            var selectAll = (boxLength == checkedLength);
+
+            $checkAll.prop('checked', selectAll);
+        });
+      </script>
+      <script>
+
+        var msg = document.getElementById("msg")
+            document.addEventListener("click", (evt) => {
+                const pswd = document.getElementById("pswd1")
+                let targetElement = evt.target;
+
+                do {
+                    if (targetElement == pswd) {
+                        msg.style.display = "block";
+                        return;
+                    }
+                    targetElement = targetElement.parentNode;
+                }
+                while (targetElement);
+                    if (msg.style.color == '#df3123'|| charMsg.style.color =='#ffc107') {
+                        msg.style.display = "block"}
+                        else {
+                    msg.style.display = "none"
+                        };
+            });
+        var charMsg = document.getElementById("charMsg");
+
+        document.addEventListener("click", (evt) => {
+            const username = document.getElementById("userN")
+            let targetElement = evt.target;
+            do {
+                if (targetElement == username) {
+                    charMsg.style.display = "block";
+                    return;
+                }
+                targetElement = targetElement.parentNode;
+            }
+            while (targetElement);
+            if (charMsg.style.color == '#df3123'|| charMsg.style.color =='#ffc107') {
+                charMsg.style.display = "block"}
+                else {
+                charMsg.style.display = "none";
+                };
+        });
+      </script>
+      <script>
+        function emailF() {
+            var emailreg = new RegExp(/^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+            var email = $("#emailAd").val();
+            if (emailreg.test(email)) {
+                $("#blankMsg").css("display", "none");
+                $("#emailAd").css("border-color", "#484d52");
+                $("#emailAd").addClass("ffocus");
+            }
+            else {$("#blankMsg").css("display", "block")
+            };
+        };
+
+        function passwordF() {
+            var pwdreg1 = new RegExp(/.{8,}/);
+            var pwdreg2 = new RegExp(/.*[A-Za-z].*/);
+            var pwdreg3 = new RegExp(/.*[0-9].*/);
+            var pwdreg4 = new RegExp(/.*[!@#$%^&*()_+=?<>].*/);
+            var pwdreg = new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{8,}$/);
+            var pw1 = $("#pswd1").val();
+            if (pwdreg1.test(pw1)) {
+                $("#msg1").css("color", "#ffc107")}
+                else{$('#msg1').css("color", "#A2A1A2")
+            };
+            
+            if (pwdreg2.test(pw1)) {
+                $("#msg2").css("color", "#ffc107")}
+                else{$('#msg2').css("color", "#A2A1A2")
+            };
+            
+            if (pwdreg3.test(pw1)) {
+                $("#msg3").css("color", "#ffc107")}
+                else{$('#msg3').css("color", "#A2A1A2")
+            };
+    
+            if (pwdreg4.test(pw1)) {
+                $("#msg4").css("color", "#ffc107")}
+                else{$('#msg4').css("color", "#A2A1A2")
+            };
+            if (pwdreg.test(pw1)) {
+                $("#pswd1").css("border-color", "#484d52")
+                $("#pswd1").addClass("ffocus");
+            };
+        };
+
+        function usernameF() {
+            var unreg1 = new RegExp(/^[a-zA-Z0-9]+$/);
+            var unreg2 = new RegExp(/.{4,16}/);
+            var unreg = new RegExp(/^[a-zA-Z0-9_]*.{4,16}$/);
+            var username = $("#userN").val();
+            if (unreg1.test(username)){
+                $("#charMsg1").css("color", "#ffc107")
+            } else {$('#charMsg1').css("color", "#A2A1A2")
+            };
+
+            if (unreg2.test(username)){
+                $("#charMsg2").css("color", "#ffc107")
+            } else {$('#charMsg2').css("color", "#A2A1A2")
+            };
+
+            if (unreg.test()){
+                $("#userN").css("border-color", "#484d52");
+                $("#userN").addClass("ffocus");
+            };
+        };
+
+        function passwordmatch() {
+            var pswd1 = $("#pswd1").val();
+            var pswd2 = $("#pswd2").val();
+            if (pswd1 == pswd2) {
+                $("#message2").css("display", "none");
+                $("#pswd2").css("border-color", "#484d52");
+                $("#pswd2").addClass("ffocus");
+            }
+            else {$("#message2").css("display", "block")
+            };
+        };
+      </script>
+      <script>
+        var checkAll = document.querySelector('#checkAll');
+        function addEventListener(event){
+          if (checkAll.checked) {
+            document.getElementById("termsAlert").style.display="none";
+          }
+          };
       </script>
       <script>
         function validateForm() {
             //collect form data in JavaScript variables
-            var pw1 = document.getElementById("pswd1").value;
-            var pw2 = document.getElementById("pswd2").value;
-            var email = document.getElementById("emailAd").value;
-            var username = document.getElementById("userN").value;
+            var pw1 = $("#pswd1").val();
+            var pw2 = $("#pswd2").val();
+            var email = $("#emailAd").val();
+            var username = $("#userN").val();
             var emailReg = new RegExp(/^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
             var pwdReg = new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{8,}$/);
-            var unReg = new RegExp(/^[a-zA-Z0-9_]{8,16}$/);
+            var unReg = new RegExp(/^[a-zA-Z0-9_]*.{4,16}$/);
+            var checkAll = $('#checkAll');
+            var month = $("#select-month");
+            var day = $("#select-day");
+            var year = $("#select-year");
+            let monthv = $("#select-month").val();
+            let dayv = $("#select-day").val();
+            let yearv = $("#select-year").val();
         
             //check empty first name field
-            if(!emailReg.test(email)) {
-              document.getElementById("blankMsg").innerHTML = "Please enter a valid email address";
-              document.getElementById("blankMsg").style.color = "red";
+            if(emailReg.test(email) == false) {
+              $("#blankMsg").css("color", "#df3123");
+              $("#blankMsg").css("display", "block");
+              $("#emailAd").css("border-color", "#df3123");
+              $("#emailAd").removeClass("ffocus")
             }
-           
             //minimum password length validation
-            if(!pwdReg.test(pw1)) {
-              document.getElementById("msg").style.color = "red";
-              document.getElementById("msg1").innerHTML = "Password length must be at least 8 characters.";
-              document.getElementById("msg2").innerHTML = "Password must contain at least one letter.";
-              document.getElementById("msg3").innerHTML = "Password must contain at least one number.";
-              document.getElementById("msg4").innerHTML = "Password must contain at least one special character.";
+            if(pwdReg.test(pw1) == false) {
+              $("#msg").css("color", "#df3123");
+              $("#msg").css("display", "block");
+              $("#pswd1").css("border-color", "#df3123");
+              $("#pswd1").removeClass("ffocus")
             }
 
-            if(!unReg.test(username)) {
-                document.getElementById("charMsg").style.color = "red";
-                document.getElementById("charMsg1").innerHTML = "Username must be alphanumeric";
-                document.getElementById("charMsg2").innerHTML = "Username must be between 4-16 characters";
+            if(unReg.test(username) == false) {
+                $("#charMsg").css("color", "#df3123");
+                $("#charMsg").css("display", "block");
+                $("#userN").css("border-color", "#df3123");
+                $("#userN").removeClass("ffocus")
+                return false;
               }
               
             if(pw1 != pw2) {
-                document.getElementById("message2").style.color = "red";
-                document.getElementById("message2").innerHTML = "Passwords are not same";
-            }
-
-            if(!emailReg.test(email) || !pwdReg.test(pw1) || !unReg.test(username) || pw1 != pw2){
+                $("#message2").css("color", "#df3123");
+                $("#message2").css("display", "block");
+                $("#pswd2").css("border-color", "#df3123");
+                $("#pswd2").removeClass("ffocus")
                 return false;
             }
-        }
-        
-        </script>
-        <script>
-            var msg = document.getElementById("msg")
-            var msg1 = document.getElementById("msg1");
-            var msg2 = document.getElementById("msg2");
-            var msg3 = document.getElementById("msg3");
-            var msg4 = document.getElementById("msg4");
-            document.addEventListener("click", (evt) => {
-                const pswd = document.getElementById("pswd1")
-                let targetElement = evt.target;
-                do {
-                    if (targetElement == pswd) {
-                        msg1.innerHTML = "Password length must be at least 8 characters.";
-                        msg2.innerHTML = "Password must contain at least one letter.";
-                        msg3.innerHTML = "Password must contain at least one number.";
-                        msg4.innerHTML = "Password must contain at least one special character.";
-                        return;
-                    }
-                    targetElement = targetElement.parentNode;
-                }
-                while (targetElement);
-                {
-                msg1.innerHTML = "";
-                msg2.innerHTML = "";
-                msg3.innerHTML = "";
-                msg4.innerHTML = "";
-                }
-            });
-        </script>
-        <script>
-            var charMsg1 = document.getElementById("charMsg1");
-            var charMsg2 = document.getElementById("charMsg2");
-            var charMsg = document.getElementById("charMsg");
 
-            document.addEventListener("click", (evt) => {
-                const username = document.getElementById("userN")
-                let targetElement = evt.target;
-                do {
-                    if (targetElement == username) {
-                        charMsg1.innerHTML = "Username must be alphanumeric.";
-                        charMsg2.innerHTML = "Username must be between 4-16 characters.";
-                        return;
-                    }
-                    targetElement = targetElement.parentNode;
+            if (checkAll.checked == false){
+                $("#termsAlert").css("display", "block");
+                return false;
+            }
+
+            if (month.value=="month" || day.value=="day" || year.value=="year"){
+                $("#dateAlert").css("display", "block");
+                return false;
+            }
+
+            }       
+        </script>
+        <script>
+            $(document).ready(function(){
+                if ($('#block').html()=='block') {
+                  $('#accountAlert').css('display','block');
                 }
-                while (targetElement);
-                    charMsg1.innerHTML = "";
-                    charMsg2.innerHTML = "";
-            });
+              });
         </script>
   </body>
 </html>

@@ -1,0 +1,108 @@
+* {
+  font-family: 'Nanum Gothic', sans-serif; }
+
+.video-sub {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; }
+
+.top-container {
+  padding-top: 40px;
+  font-size: 30px;
+  width: 900px;
+  position: absolute;
+  z-index: 1000;
+  left: calc(50% - 280px); }
+
+.body-container {
+  font-size: 1.2em;
+  padding: 30px;
+  padding-top: 150px;
+  width: 570px;
+  height: 1200px;
+  position: absolute;
+  left: calc(50% - 280px);
+  top: calc(50% - 100px);
+  border: 2px solid #fff;
+  z-index: 1000;
+  color: #9a9c9e; }
+
+.wrap {
+  padding-top: 80px; }
+
+.form-wrap {
+  padding-top: 70px; }
+
+#password {
+  padding-top: 30px; }
+
+#check-forget {
+  padding-top: 15px; }
+
+#login {
+  padding-top: 15px; }
+
+#no-account {
+  padding-top: 80px; }
+
+button {
+  margin: 100px 0 0 100px; }
+
+.center-a {
+  text-align: center; }
+
+.left-a {
+  text-align: left; }
+
+.right-a {
+  text-align: right; }
+
+.box {
+  width: 74.3px;
+  height: 55px;
+  border-radius: 3px;
+  margin: 0 2px 0 2px; }
+
+.big-font {
+  font-size: 60px;
+  font-weight: 2000; }
+
+.border-yellow-thick {
+  border-color: #ffc107;
+  border-width: 2px; }
+
+.discord {
+  background-color: #96a3fd; }
+
+.facebook {
+  background-color: #2915a8; }
+
+.form-control {
+  font-size: 20px; }
+
+.google {
+  background-color: #e5e4ef; }
+
+.reddit {
+  background-color: #ff4d00; }
+
+.oauth {
+  background-color: #1770b8; }
+
+.twitter {
+  background-color: #55a6e8; }
+
+.logo {
+  margin: 18px 0 0 0; }
+
+input[type="text"]:focus {
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  border-color: #ffc107 !important; }
+
+.big-checkbox {
+  width: 30px;
+  height: 30px; }

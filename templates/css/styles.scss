@@ -1,0 +1,24 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif; }
+
+body {
+    padding: 50px 0px 0px 0px;
+    z-index: 0; }
+
+.video-sub {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:1000;
+    }
+
+.top-container {
+    position: absolute;
+}
+
+.dropdown-menu {
+    left: auto;
+    right: 0;
+}

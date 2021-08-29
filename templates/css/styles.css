@@ -1,0 +1,286 @@
+* {
+    font-family: 'Oswald', sans-serif; }
+
+body {
+    padding: 35px 0px 0px 0px;
+    z-index: 0; }
+
+.video-sub {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#login-registration {
+    text-decoration: none;
+    color: #A2A1A1; 
+    font-size:17px; 
+    font-weight: bold;
+    margin-right: 42px;
+}
+
+#login-registration:hover {
+    color: #f2a900;
+}
+
+#language {
+    color:#A2A1A1
+}
+
+#language:hover {
+    color: #f2a900;
+}
+
+
+/* .dropdown:hover .dropdown-menu { display: block; margin-top: 10px; margin-right: -20px; right: 0;} */
+
+.column {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-center {
+    text-align: center;
+}
+
+.google {
+    background-color: #e5e4ef; }
+  
+.reddit {
+    background-color: #ff4d00; }
+
+.oauth {
+    background-color: #1770b8; }
+
+.twitter {
+    background-color: #55a6e8; }
+
+.discord {
+    background-color: #96a3fd; }
+  
+.facebook {
+    background-color: #2915a8; }
+
+.box {
+    width: 74.3px;
+    height: 55px;
+    border-radius: 3px;
+    margin: 0 1 0 1;}
+
+.logo {
+    margin: 11px 0 0 0;
+    }
+
+.column-body {
+    padding-top: 30px;
+}
+
+.login-body-section {
+    padding-top: 40px;
+}
+
+input[type="text"]:focus {
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    border-color: #ffc107 !important; }
+
+input[type="password"]:focus {
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    border-color: #ffc107 !important; }
+
+.form-group {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+
+.big-checkbox {
+    width: 30px;
+    height: 30px; }
+
+#forgot {
+    color: #A2A1A1;
+    text-decoration: none;
+
+}
+
+#forgot:hover {
+    color: #f2a900;   
+}
+
+.vertical-horizontal-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.form-block {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.border-yellow-thick {
+    border-color: #ffc107;
+    border-width: 2px; }
+
+.login-bottom-section {
+    padding-top: 40px;
+}
+
+.form-container {
+    padding-bottom: 170px;
+}
+
+.form-terms {
+    min-height: 126px;
+}
+
+.footer {
+    background-color: rgb(16, 16, 16, 0.6);
+    margin: 0px auto;
+    padding: 20px 0 20px 0;
+    color: #C6C6C6;
+}
+
+/* register.html */
+
+.greetings {
+    font-size: 82px;
+    color: white;
+    font-weight: 1000;
+    line-height: 100%;
+}
+
+#steps {
+    color: white;
+}
+
+.register-body-container {
+    padding-top: 85px;
+    padding-bottom:130px;
+}
+
+select option{
+    background-color: #373434;
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 100px 0 100px 0;
+}
+
+select:focus {
+    outline: none;
+}
+
+#month {
+    height: 60px;
+    border:none;
+    border-bottom: 2px solid #484d52;
+}
+
+#day {
+    height: 60px;
+    border:none;
+    border-bottom: 2px solid #484d52;
+}
+
+#year {
+    height: 60px;
+    border:none;
+    border-bottom: 2px solid #484d52;
+}
+
+button[type="button"]:focus {
+    -webkit-appearance: none;
+    box-shadow: none !important; }
+
+
+#check-all {
+    border-bottom: 2px ridge #484d52;
+}
+
+.check-all {
+    padding-top: 30px;
+}
+
+
+input[type="checkbox"]{
+    background-color: #404248;
+    border: 0;
+}
+
+
+input[type="checkbox"]:focus{
+    -webkit-appearance: none;
+    border: 0;
+    box-shadow: none !important; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: #404248;
+    border: 0;
+}
+
+.bg-black {
+    background-color: #131313;
+}
+
+.font-white {
+    color: white;
+}
+
+.font-yellow {
+    color: #f2a900;
+}
+
+.bg-dark-gray {
+    background-color: #1e1e1e;
+}
+
+.border-none {
+    border: none;
+}
+
+.font-bold {
+    font-weight: 500;
+}
+
+.border-left-thick-yellow {
+    border-left: 6px solid #f2a900;
+    border-bottom: 0;
+}
+
+.font-gray {
+    color: #b2b4b8;
+}
+
+#resend-email {
+    border-width: 1px;
+    color:  #838383;
+    border-color: #595959;
+    font-size: 17x;
+    font-weight: 500;
+    height: 60px;
+    
+}
+
+.verification-body-container {
+    padding-bottom: 320px;
+}
+
+.confirmation-body-container {
+    padding-bottom: 220px;
+}
+
+.multi-steps {
+    padding-bottom:12px;
+}
